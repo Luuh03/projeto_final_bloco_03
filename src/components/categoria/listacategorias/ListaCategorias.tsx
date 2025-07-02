@@ -3,6 +3,7 @@ import type { Categoria } from "../../../models/Categoria"
 import { buscar } from "../../../services/Service"
 import { DNA } from "react-loader-spinner"
 import CardCategoria from "../cardcategorias/CardCategoria"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 
 function ListaCategorias() {
@@ -19,7 +20,7 @@ function ListaCategorias() {
       await buscar('/categorias', setCategorias)
 
     } catch (error: any) {
-      alert('Houve algum erro ao carregar as categorias!')
+      ToastAlerta('Houve algum erro ao carregar as categorias!', 'erro')
       console.log(error)
 
     } finally {

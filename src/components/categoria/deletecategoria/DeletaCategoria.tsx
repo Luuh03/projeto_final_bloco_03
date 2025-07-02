@@ -4,6 +4,7 @@ import type { Categoria } from "../../../models/Categoria"
 import { buscar, deletar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
 import { CheckIcon, XIcon } from "@phosphor-icons/react"
+import { ToastAlerta } from "../../../utils/ToastAlerta"
 
 
 function DeletaCategoria() {
@@ -21,7 +22,7 @@ function DeletaCategoria() {
       await buscar(`/categorias/${id}`, setCategoria)
 
     } catch (error: any) {
-      alert('Houve algum erro ao carregar a categoria!')
+      ToastAlerta('Houve algum erro ao carregar a categoria!', 'erro')
       console.log(error)
     }
   }
@@ -32,8 +33,9 @@ function DeletaCategoria() {
     try {
       await deletar(`/categorias/${id}`)
 
+      ToastAlerta("A categoria foi deletada com sucesso!", 'sucesso')
     } catch (error: any) {
-      alert('Houve algum erro ao deletar a categoria!')
+      ToastAlerta('Houve algum erro ao deletar a categoria!', 'erro')
       console.log(error)
 
     }

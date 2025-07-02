@@ -6,11 +6,13 @@ import Home from './pages/home/Home'
 import ListaCategorias from './components/categoria/listacategorias/ListaCategorias'
 import DeletaCategoria from './components/categoria/deletecategoria/DeletaCategoria'
 import FormCategoria from './components/categoria/formcategoria/FormCategoria'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
   return (
     <>
+    <ToastContainer />
       <BrowserRouter>
       <Navbar />
 
