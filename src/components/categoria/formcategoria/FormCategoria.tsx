@@ -1,7 +1,7 @@
 import { useEffect, useState, type ChangeEvent, type FormEvent } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import type { Categoria } from "../../models/Categoria"
-import { atualizar, buscar, cadastrar } from "../../services/Service"
+import type { Categoria } from "../../../models/Categoria"
+import { atualizar, buscar, cadastrar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
 
 

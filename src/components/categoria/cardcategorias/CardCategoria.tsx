@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import type { Categoria } from "../../models/Categoria"
 import { PencilIcon, TrashIcon } from "@phosphor-icons/react"
+import type { Categoria } from "../../../models/Categoria"
 
 interface CardCategoriaProps {
   categoria: Categoria
